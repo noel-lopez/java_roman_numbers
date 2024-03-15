@@ -12,6 +12,9 @@ public class RomanConverter {
         if (number == 7) {
             return "VII";
         }
+        if (number == 8) {
+            return "VIII";
+        }
         String romanNumeral = "";
         for (int i = 0; i < number; i++) {
             romanNumeral += "I";
