@@ -1,23 +1,20 @@
 package com.codurance;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RomanConverterShould {
-    @Test
-    public void return_I_given_1 () {
-        assertEquals("I", RomanConverter.convert(1));
-    }
 
-    @Test
-    public void return_II_given_2 () {
-        assertEquals("II", RomanConverter.convert(2));
+    @ParameterizedTest(name = "{1} into {0}")
+    @CsvSource({
+            "I, 1",
+            "II, 2",
+            "III, 3"
+    })
+    public void convert (String expected, int input) {
+        assertEquals(expected, RomanConverter.convert(input));
     }
-
-    @Test
-    public void return_III_given_3 () {
-        assertEquals("III", RomanConverter.convert(3));
-    }
-
 }
