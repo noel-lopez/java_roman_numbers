@@ -3,20 +3,16 @@ package com.codurance;
 public class RomanConverter {
 
     public static String convert(int number) {
-        if (number == 5) {
-            return "V";
-        }
-        if(number == 6) {
-            return "VI";
-        }
-        if (number == 7) {
-            return "VII";
-        }
-        if (number == 8) {
-            return "VIII";
-        }
+        // Temporal state
         String romanNumeral = "";
-        for (int i = 0; i < number; i++) {
+        int auxNumber = number;
+        // Add V if needed
+        if (auxNumber >=5) {
+            romanNumeral += "V";
+            auxNumber -= 5;
+        }
+        // Add as much "I" as needed
+        for (int i = 0; i < auxNumber; i++) {
             romanNumeral += "I";
         }
         return romanNumeral;
