@@ -12,7 +12,8 @@ public class RomanConverterShould {
     @CsvSource({
             "I, 1",
             "II, 2",
-            "III, 3"
+            "III, 3",
+            "V, 5"
     })
     public void convert (String expected, int input) {
         assertEquals(expected, RomanConverter.convert(input));
