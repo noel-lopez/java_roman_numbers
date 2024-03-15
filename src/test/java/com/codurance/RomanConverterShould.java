@@ -13,7 +13,8 @@ public class RomanConverterShould {
             "I, 1",
             "II, 2",
             "III, 3",
-            "V, 5"
+            "V, 5",
+            "VI, 6"
     })
     public void convert (String expected, int input) {
         assertEquals(expected, RomanConverter.convert(input));
