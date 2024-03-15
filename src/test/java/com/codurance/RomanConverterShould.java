@@ -15,4 +15,9 @@ public class RomanConverterShould {
         assertEquals("II", RomanConverter.convert(2));
     }
 
+    @Test
+    public void return_III_given_3 () {
+        assertEquals("III", RomanConverter.convert(3));
+    }
+
 }
